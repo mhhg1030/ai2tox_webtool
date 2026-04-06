@@ -39,12 +39,12 @@ const META_COLS = [
   { key: 'shaking', label: 'Shaking', w: 70 },
 ]
 
-const PAGE_SIZE = 8
+const PAGE_SIZE = 10
 
 const ZP_CHARGE_COLORS = {
-  Negative: { bg: '#EBF2FB', color: '#3A6BAF' },
-  Positive: { bg: '#FCEEF5', color: '#A84B7A' },
-  Neutral:  { bg: '#F0F4F0', color: '#3A6B3A' },
+  Neutral: { bg: '#EBF2FB', color: '#3A6BAF' },
+  Negative: { bg: '#FCEEF5', color: '#A84B7A' },
+  Positive:  { bg: '#F0F4F0', color: '#3A6B3A' },
 }
 
 export default function Dashboard() {
@@ -166,7 +166,7 @@ export default function Dashboard() {
               </tr>
             </thead>
             <tbody>
-              {paged.map((row, i) => {
+              {filtered.map((row, i) => {
                 const chargeStyle = ZP_CHARGE_COLORS[row.zp_charge] || {}
                 return (
                   <tr key={row.id} style={{ borderTop: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'var(--surface-2)' }}>
@@ -202,12 +202,12 @@ export default function Dashboard() {
           </table>
         </div>
 
-        <div style={{ padding: '10px 20px', background: '#fff', borderTop: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '8px', fontSize: '0.82rem', color: 'var(--text-2)' }}>
+        {/* <div style={{ padding: '10px 20px', background: '#fff', borderTop: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '8px', fontSize: '0.82rem', color: 'var(--text-2)' }}>
           <span>Rows per page: {PAGE_SIZE}</span>
           <span style={{ margin: '0 8px' }}>{(page - 1) * PAGE_SIZE + 1}–{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length}</span>
           <button style={{ ...btn('outline'), padding: '4px 10px' }} disabled={page === 1} onClick={() => setPage(p => p - 1)}>‹</button>
           <button style={{ ...btn('outline'), padding: '4px 10px' }} disabled={page >= totalPages} onClick={() => setPage(p => p + 1)}>›</button>
-        </div>
+        </div> */}
       </main>
 
       {/* Detail Modal */}
