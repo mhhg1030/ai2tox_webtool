@@ -87,10 +87,10 @@ export default function Home() {
       <div style={s.hero}>
         <div style={s.tag}>Nanoparticle Protein Corona</div>
         <h1 style={s.h1}>NP-PC Protein Corona Database</h1>
-        <p style={s.sub}>
+        {/* <p style={s.sub}>
           Quantitative protein corona data for nanoparticles incubated with human plasma and serum —
           built to enable AI-driven prediction of bio-nano interactions.
-        </p>
+        </p> */}
         <div style={s.btnRow}>
           <button style={s.btnPrimary} onClick={() => navigate('/dashboard')}>Explore Data</button>
           {!user && (
