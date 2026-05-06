@@ -61,6 +61,7 @@ export default function Navbar() {
   const navItems = [
     { to: '/', label: 'Home', end: true },
     { to: '/dashboard', label: 'Dashboard' },
+    { to: '/webtool', label: 'Webtool' },
     { to: '/tutorial', label: 'Tutorial' },
     { to: '/contact', label: 'Contact Us' },
   ]
